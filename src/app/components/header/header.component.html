@@ -6,3 +6,11 @@
 
 <div> {{ contador }} </div>
 <button (click) =suma()> suma </button>
+
+<ul>
+    <li *ngFor="let numero of arr">
+            {{numero}}
+    </li>
+</ul>
+
+<button (click) =add()> Añadir elemento </button>

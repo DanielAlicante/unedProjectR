@@ -6,13 +6,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './components/app/app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { UserComponent } from './components/user/user.component';
 
 /*Service   vacio   */
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

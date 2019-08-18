@@ -16,8 +16,12 @@ export class HeaderComponent implements OnInit {
    ngOnInit() {
     console.log ("Component Header ya Creado!!!")
   }
+
  nombre = "Tu salud, lo primero"
-contador=0
+ contador=0
+arr= [1, 2, 3, 4 ,5 ,6, 7, 8, 9, 10 ]
+
+
  cambiarNombre(){
    this.nombre +=" Fujitsu"
  }
@@ -25,6 +29,8 @@ contador=0
    this.contador ++
  }
   
-  
+  add(){
+    this.arr.push(Math.random())
+  }
  
 }
