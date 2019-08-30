@@ -12,6 +12,7 @@ import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from './components/user/user.component';
 import { ComunicacionComponent } from './components/comunicacion/comunicacion.component';
+import { SendComponent } from './components/send/send.component';
 
 /*Service   vacio   */
 
@@ -20,7 +21,8 @@ import { ComunicacionComponent } from './components/comunicacion/comunicacion.co
     AppComponent,
     HeaderComponent,
     UserComponent,
-    ComunicacionComponent
+    ComunicacionComponent,
+    SendComponent
       ],
   imports: [
     BrowserModule,

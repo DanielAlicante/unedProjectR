@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-
+ 
+  isLogged=false;
+  nivel=5;
+  
   constructor() { }
 
   ngOnInit() {

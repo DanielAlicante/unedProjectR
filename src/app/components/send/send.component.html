@@ -1,0 +1,15 @@
+<p>send works!</p>
+
+<h1>Basic Send</h1>
+<div>
+    <label for="nombre">nombre:</label>
+    <input name="nombre"  #newnombre>
+    <label for="apellido">apellido:</label>
+    <input name="apellido" #newapellido>
+<button type="button"(click)="makeSend(newnombre, newapellido)">Make Send</button>
+
+
+<div *ngIf="loading">loading</div>
+
+
+</div>
