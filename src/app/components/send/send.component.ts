@@ -22,6 +22,7 @@ export class SendComponent implements OnInit {
 
   makeSend( nombre: HTMLInputElement, apellido: HTMLInputElement):boolean{
     //this.nombre=nombre;
+    console.log(nombre.value, apellido.value);
     this.loading=true;
     this.http
       .post(
