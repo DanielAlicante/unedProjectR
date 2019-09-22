@@ -1,10 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {
-  // The NG module for using @angular/common/http
-  HttpClientModule
-} from  '@angular/common/http';
-
+import { HttpClientModule } from  '@angular/common/http';
+//import { HttpClientJsonpModule } from  '@angular/common/http';
 
 /*Components*/
 import { AppRoutingModule } from './components/app/app-routing.module';
@@ -13,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from './components/user/user.component';
 import { ComunicacionComponent } from './components/comunicacion/comunicacion.component';
 import { SendComponent } from './components/send/send.component';
+import { Send2Component } from './components/send2/send2.component';
 
 /*Service   vacio   */
 
@@ -22,7 +20,8 @@ import { SendComponent } from './components/send/send.component';
     HeaderComponent,
     UserComponent,
     ComunicacionComponent,
-    SendComponent
+    SendComponent,
+    Send2Component
       ],
   imports: [
     BrowserModule,

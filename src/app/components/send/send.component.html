@@ -3,10 +3,14 @@
 <h1>Basic Send</h1>
 <div>
     <label for="nombre">nombre:</label>
-    <input name="nombre"  #newnombre>
+    <input name=nombre  >
     <label for="apellido">apellido:</label>
-    <input name="apellido" #newapellido>
-<button type="button"(click)="makeSend(newnombre, newapellido)">Make Send</button>
+    <input name=apellido >
+<button type="button"(click)="makeSend()">Make Send</button>
+<div>
+{{nombre}}
+{{apellido}}
+</div>
 
 
 <div *ngIf="loading">loading</div>

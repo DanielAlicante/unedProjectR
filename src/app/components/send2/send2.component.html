@@ -1,0 +1,14 @@
+<p>send2 works!</p>
+<h1>VIDEO : https://www.youtube.com/watch?v=MN2WkxPnGTo&list=PL7pEw9n3GkoXn-QW8kU74pmrK2qJmjXGU&index=2 </h1>
+
+<input type="long" (keyup)="onNameKeyUP($event)">
+<button (click)="getProfile()"> Get Profile by number id </button>
+<pre>{{data1 | json }} </pre>
+
+<br>
+<div *ngIf="found">
+    <span>{{name}}`s expertise is {{expertise}}</span>
+
+</div>
+-------------------------------------------------------
+<button (click)="postProfile()"> Post Profile  </button>

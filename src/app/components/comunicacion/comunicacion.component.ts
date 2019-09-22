@@ -14,6 +14,7 @@ export class ComunicacionComponent implements OnInit {
 
 
 
+
   constructor( http: HttpClient) { 
  this.http = http;
   }
@@ -24,7 +25,8 @@ makeRequest():void{
   // funcion  para pedir información. 
   this.loading=true;
   this.http
-    .get ('http://localhost:8080/company/employees/1')
+    .get ('http://localhost:8080/company/employees')
+    //.get ('http://localhost:8080/demo/hello')
     .subscribe(data=>{
          this.data=data;
          this.loading=false;
