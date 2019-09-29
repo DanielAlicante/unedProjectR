@@ -13,8 +13,8 @@ export class SendComponent implements OnInit {
   loading : boolean;
   http: HttpClient;
   //nombre:HTMLInputElement;
-  nombre: string;
-  apellido: string;
+  nombre: string ="";
+  apellido: string="";
 
   constructor( http: HttpClient) {
     this.http=http;
@@ -25,18 +25,18 @@ export class SendComponent implements OnInit {
 
 
   makeSend(){
-    //this.nombre=nombre;
-    //console.log(nombre.value, apellido.value);
+    
+    console.log(this.nombre, this.apellido);
     console.log("va 1");
     this.loading=true;
     this.http
       .post(
         'http://localhost:8080/company/employees',
-        JSON.stringify({
-          name: "this.nombre",
-          designation : "this.apellido",
+        {
+          name: this.nombre,
+          designation : this.apellido,
           expertise : "nuevonuevonuevonuevo"
-        })
+        }
       )
         .subscribe( data =>{
           this.data=data;

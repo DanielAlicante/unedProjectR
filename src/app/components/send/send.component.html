@@ -2,10 +2,19 @@
 
 <h1>Basic Send</h1>
 <div>
-    <label for="nombre">nombre:</label>
-    <input name=nombre  >
+    <label for="nombre">nombre:{{nombre}}</label>
+    <input  type ="text"
+            id="nombre"
+            name="nombre"
+            [(ngModel)]="nombre" >
+
+
     <label for="apellido">apellido:</label>
-    <input name=apellido >
+    <input  type="text"
+            id="apellido"
+            name="apellido" 
+            [(ngModel)]="apellido">
+
 <button type="button"(click)="makeSend()">Make Send</button>
 <div>
 {{nombre}}

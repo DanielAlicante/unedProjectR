@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { logging } from 'protractor';
-import { JsonPipe } from '@angular/common';
+//import { logging } from 'protractor';
+//import { JsonPipe } from '@angular/common';
 
 //import { HttpClientJsonpModule } from  '@angular/common/http';
 //import { HttpClient } from 'selenium-webdriver/http';
@@ -34,9 +34,9 @@ export class Send2Component implements OnInit {
         this.found=true;
         this.data1=data;
         //this.expertise=data[(this.name)].expertise;
-        console.log(this.expertise);
-        this.expertise=data[4].expertise;
-        console.log(this.expertise);
+        console.log(this.expertise);          // sale "nulo" que es el valor como inicie
+        //this.expertise=data[4].expertise;   no he conseguido sacar un solo dato
+        console.log(this.expertise);          // tengo que sacar valor solo y no puedo
         
       }
     )
@@ -45,19 +45,14 @@ export class Send2Component implements OnInit {
 
   postProfile(){
     console.log(this.name);
-    this.httpClient.post('http://localhost:8080/company/employees/', {
-
-      name : "daniangular",
-      designation : "fujiangular",
+    this.httpClient.post('http://localhost:8080/company/employees/',{
+      name: "daniangular",
+      designation: "fujiangular",
       expertise: "tecnicoangular"
-
-    } )
+    })
     .subscribe(
       (data:any)=>{
-        console.log(data);
-
-      
-        
+        console.log(data);        
       }
     )
   }
