@@ -12,7 +12,7 @@ export class ComunicacionComponent implements OnInit {
   loading : boolean;
   http: HttpClient;
 
-  
+
 
 
   constructor( http: HttpClient) { 
@@ -21,17 +21,18 @@ export class ComunicacionComponent implements OnInit {
   ngOnInit() {
   }
 
-      makeRequest():void{
-        // funcion  para pedir información. 
-        this.loading=true;
-        this.http
-          .get ('http://localhost:8080/demo/hello')
-          .subscribe(data=>{
-              this.data=data;
-              this.loading=false;
-          })
-      }
+makeRequest():void{
+  // funcion  para pedir información. 
+  this.loading=true;
+  this.http
+    .get ('http://localhost:8080/company/employees')
+    //.get ('http://localhost:8080/demo/hello')
+    .subscribe(data=>{
+         this.data=data;
+         this.loading=false;
+    })
+  
 
-    
- 
+}
+
 }

@@ -13,28 +13,34 @@ export class SendComponent implements OnInit {
   loading : boolean;
   http: HttpClient;
   //nombre:HTMLInputElement;
+  nombre: string ="";
+  apellido: string="";
 
-  constructor() { }
+  constructor( http: HttpClient) {
+    this.http=http;
+   }
 
   ngOnInit() {
   }
 
 
-  makeSend( nombre: HTMLInputElement, apellido: HTMLInputElement):boolean{
-    //this.nombre=nombre;
+  makeSend(){
+    
+    console.log(this.nombre, this.apellido);
+    console.log("va 1");
     this.loading=true;
     this.http
       .post(
-        'http://localhost:8080/demo/postNombre',
-        JSON.stringify({
-          body: 'noseusarlo',//pagina 208 manual
-          nombre: nombre.value,
-          apellido: apellido.value
-        })
+        'http://localhost:8080/company/employees',
+        {
+          name: this.nombre,
+          designation : this.apellido,
+          expertise : "nuevonuevonuevonuevo"
+        }
       )
         .subscribe( data =>{
           this.data=data;
-          
+          this.loading=false;
         })
       
 
