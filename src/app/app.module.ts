@@ -4,6 +4,11 @@ import {
   // The NG module for using @angular/common/http
   HttpClientModule
 } from  '@angular/common/http';
+import {
+  // the ng module for using routing    13-09-19
+  RouterModule,
+  Routes
+} from '@angular/router'
 
 
 /*Components*/
