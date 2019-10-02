@@ -26,13 +26,23 @@ makeRequest():void{
   this.loading=true;
   this.http
     .get ('http://localhost:8080/company/employees')
-    //.get ('http://localhost:8080/demo/hello')
     .subscribe(data=>{
          this.data=data;
          this.loading=false;
     })
   
+  }
 
-}
+      cuantosRequest():void{
+        // funcion  para pedir información. 
+        this.loading=true;
+        this.http
+          .get ('http://localhost:8080/company/cuantos')
+          .subscribe(data=>{
+              this.data=data;
+              this.loading=false;
+          })
+
+  }
 
 }
