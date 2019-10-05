@@ -1,9 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from  '@angular/common/http';
+//<<<<<<< HEAD
+import {
+  // The NG module for using @angular/common/http
+  HttpClientModule
+} from  '@angular/common/http';
+import {
+  // the ng module for using routing    13-09-19
+  RouterModule,
+  Routes
+} from '@angular/router'
+
+//=======
+//import { HttpClientModule } from  '@angular/common/http';
 //import { HttpClientJsonpModule } from  '@angular/common/http';
 import {FormsModule,
         ReactiveFormsModule} from '@angular/forms';
+//>>>>>>> 1ae3a9daf157ab603f0690d21a7f3d4a4af111ee
 
 /*Components*/
 import { AppRoutingModule } from './components/app/app-routing.module';
