@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+nav a{
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: black;
+    border-radius: 14px;
+
+}
+
+
+nav a:visited, a:link {
+    color: #607d00;
+}
+
+nav a:hover {
+    color: #033be5;
+    background-color: bisque;
+}
+
+nav a.active{
+    color: #039be5;
+}
