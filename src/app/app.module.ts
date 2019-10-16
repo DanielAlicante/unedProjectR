@@ -19,7 +19,7 @@ import {FormsModule,
 //>>>>>>> 1ae3a9daf157ab603f0690d21a7f3d4a4af111ee
 
 /*Components*/
-import { AppRoutingModule } from './components/app/app-routing.module';
+import { AppRoutingModule, routingComponents } from './components/app/app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from './components/user/user.component';
@@ -29,6 +29,8 @@ import { Send2Component } from './components/send2/send2.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DemoFormSkuComponent } from './components/demo-form-sku/demo-form-sku.component';
 import { DemoFormSkuWithBuilderComponent } from './components/demo-form-sku-with-builder/demo-form-sku-with-builder.component';
+// duplicado import { EmployeeListComponent } from './components/routing/employee-list/employee-list.component';
+// duplicado al tener arriba routingComponets  : import { DeparmentListComponent } from './components/routing/deparment-list/deparment-list.component';
 
 /*Service   vacio   */
 
@@ -42,11 +44,14 @@ import { DemoFormSkuWithBuilderComponent } from './components/demo-form-sku-with
     Send2Component,
     ContactComponent,
     DemoFormSkuComponent,
-    DemoFormSkuWithBuilderComponent
+    DemoFormSkuWithBuilderComponent,
+    routingComponents
+    //EmployeeListComponent,  sustituido por routingComponets
+    //DeparmentListComponent
       ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, // para routing
     HttpClientModule, // para hacer peticiones a STS
     FormsModule, // ADD forms
     ReactiveFormsModule // Add forms
